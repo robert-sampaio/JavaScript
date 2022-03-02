@@ -1,22 +1,37 @@
-let value = {
-    receitas: [
-        5000
+let family = {
+    incomes: [
+        3000, 750, 300
     ],
-    despesas: [
-        4200
+    expenses: [
+        300, 1000, 1200
     ],
 }
 
-function total() {
-    return Number(value.receitas) - Number(value.despesas)
+function sum(array) {
+    let total = 0;
+
+    for(let value of array) {
+        total += value
+    }
+
+    return total
 }
 
-total()
+function calculateBalance() {
+    const calculateIncomes = sum(family.incomes)
+    const calculateExpenses = sum(family.expenses)
 
-if (total() < 0) {
-    console.log('Saldo Negativo')
-} else {
-    console.log('Saldo Positivo')
+    const total = calculateIncomes - calculateExpenses
+
+    const itsOk = total >= 0
+
+    let balanceText = 'Negativo'
+
+    if(itsOk) {
+        balanceText = 'Positivo'
+    }
+
+    console.log(`Seu saldo está ${balanceText} e é de ${total.toFixed(2)} reais.`)
 }
 
-console.log(`Seu saldo é de ${total()}`)
+calculateBalance()
