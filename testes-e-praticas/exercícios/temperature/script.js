@@ -23,8 +23,8 @@ function transformDegree(degree) {
 }
 
 try {
-    console.log(transformDegree('50C'))
-    console.log(transformDegree('50F'))
+    console.log(transformDegree('20C'))
+    console.log(transformDegree('0F'))
     transformDegree('50Z')
 } catch (error) {
     console.log(error.message)
