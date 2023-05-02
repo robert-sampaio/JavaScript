@@ -7,6 +7,7 @@ if (hora < 6) {
     console.log('Boa Madrugada!')
 } else if (hora < 12) {
     console.log('Bom Dia!')
+<<<<<<< HEAD
 } else if (hora < 18) {
     console.log('Boa Tarde!')
 } else if (hora < 24) {
@@ -14,3 +15,10 @@ if (hora < 6) {
 } else {
     console.log('O horário está incorreto!')
 }
+=======
+} else if (hora <= 18) {
+    console.log('Boa Tarde!')
+} else {
+    console.log('Boa Noite!')
+}
+>>>>>>> 51149c9f37aea402e1c15b9e94adefb7e6e843c4
